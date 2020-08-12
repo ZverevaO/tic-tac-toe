@@ -41,6 +41,15 @@ class GameViewController: UIViewController {
     
     @IBAction func restartButtonTapped(_ sender: UIButton) {
         Log(.restartGame)
+        
+        gameboard.clear()
+        gameboardView.clear()
+        let player = Player.first
+        currentState = PlayerInputState(player: player,
+                                        markViewPrototype: player.markViewPrototype,
+                                        gameViewController: self,
+                                        gameboard: gameboard,
+                                        gameboardView: gameboardView)
 
         
     }
