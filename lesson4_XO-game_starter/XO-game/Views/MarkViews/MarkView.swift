@@ -8,7 +8,17 @@
 
 import UIKit
 
-public class MarkView: UIView {
+public class MarkView: UIView, Copying{
+    
+    
+    required init(_ prototype: MarkView) {
+        super.init(frame: prototype.frame)
+               self.lineColor = prototype.lineColor
+               self.lineWidth = prototype.lineWidth
+               self.textColor = prototype.textColor
+
+    }
+    
     
     // MARK: - Properties
     
