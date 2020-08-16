@@ -61,10 +61,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EBp-Sv-YpY">
-                                <rect key="frame" x="127" y="5" width="131" height="32"/>
+                                <rect key="frame" x="103" y="5" width="179" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="два игрока"/>
+                                    <segment title="игра с ПК"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
