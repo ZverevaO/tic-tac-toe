@@ -10,7 +10,7 @@ import Foundation
 
 public enum LogAction {
     
-    case playerInput(player: Player, position: GameboardPosition)
+    case playerInput(player: Player, typePlayer: PlayerType, position: GameboardPosition)
     
     case gameFinished(winner: Player?)
     

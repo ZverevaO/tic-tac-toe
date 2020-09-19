@@ -9,6 +9,7 @@
 import Foundation
 
 public class GameEndedState: GameState {
+    public var isComputerGame: Bool
     
     public let isCompleted = false
     
@@ -18,6 +19,7 @@ public class GameEndedState: GameState {
      init(winner: Player?, gameViewController: GameViewController) {
         self.winner = winner
         self.gameViewController = gameViewController
+        self.isComputerGame = gameViewController.isComputerGame 
     }
     
     public func begin() {
@@ -34,13 +36,14 @@ public class GameEndedState: GameState {
         self.gameViewController?.secondPlayerTurnLabel.isHidden = true
     }
     
-    public func addMark(at position: GameboardPosition) { }
+    public func addMark(at position: GameboardPosition, freePosition: GameboardPosition) { }
     
     private func winnerName(from winner: Player) -> String {
 
         switch winner {
         case .first: return "1st player"
         case .second: return "2nd player"
+        //case .none: return "No winner"
         }
     }
 }

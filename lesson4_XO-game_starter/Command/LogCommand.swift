@@ -20,8 +20,8 @@ final class LogCommand {
     
     var logMessage: String {
         switch self.action {
-        case .playerInput(let player, let position):
-            return "\(player) placed mark at \(position)"
+        case .playerInput(let player, let typePlayer, let position):
+            return "\(player)  \(typePlayer) placed mark at \(position)"
         case .gameFinished(let winner):
             if let winner = winner {
                 return "\(winner) win game"
