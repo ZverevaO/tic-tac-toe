@@ -38,6 +38,28 @@ public final class Gameboard {
         return positions[column][row] == player
     }
     
+    //проверка на наличие пустых клеток 
+    public var gotAvailablePositions: Bool {
+        positions.flatMap {$0}.contains(nil)
+    }
+    
+    public func freePositons () -> GameboardPosition
+    {
+        var freePosition = GameboardPosition(column: 0, row: 0)
+        for column in 0 ..< GameboardSize.columns    {
+            for row in 0 ..< GameboardSize.rows {
+                let position = GameboardPosition(column: column, row: row)
+                if positions[position.column][position.row] == nil {
+                    print (positions[position.column][position.row])
+                    freePosition = position
+                    break
+                }
+               
+            }
+        }
+        print (freePosition)
+        return freePosition
+    }
     // MARK: - Private
     
     private func initialPositions() -> [[Player?]] {

@@ -10,7 +10,9 @@ public protocol GameState {
     
     var isCompleted: Bool { get }
     
+    var isComputerGame: Bool { get }
+    
     func begin()
     
-    func addMark(at position: GameboardPosition)
+    func addMark(at position: GameboardPosition, freePosition: GameboardPosition)
 }
